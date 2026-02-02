@@ -2,7 +2,7 @@ package org.sergiolozanoprofe.util;
 
 public class InputParser {
 
-    private InputParser() {
+    public InputParser() {
         // utilidad estática
     }
 
@@ -18,4 +18,9 @@ public class InputParser {
     public static org.sergiolozanoprofe.model.OperationType parseOperation(String s) {
         return org.sergiolozanoprofe.model.OperationType.fromString(s);
     }
+
+    public String[] parse(String input) {
+        return input.trim().split("\\s+");
+    }
+
 }
